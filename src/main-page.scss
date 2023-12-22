@@ -186,8 +186,8 @@ body {
     a {
       display: block;
       font-family: $font-montserrat;
-      font-weight: 400;
-      font-size: Clamp(12px, 2vw, 28px);
+      font-weight: 500;
+      font-size: Clamp(12px, 2vw, 28.015px);
       line-height: 100%;
       text-transform: uppercase;
       color: $MainColor;
@@ -349,8 +349,8 @@ body {
     a {
       display: block;
       font-family: $font-montserrat;
-      font-weight: 400;
-      font-size: Clamp(12px, 2vw, 28px);
+      font-weight: 500;
+      font-size: Clamp(12px, 2vw, 28.015px);
       line-height: 100%;
       text-transform: uppercase;
       color: $MainColor;
@@ -557,6 +557,11 @@ body {
   }
 }
 
+.three-sections {
+  background: url('/assets/images/main-page/bg-img-three-sections.webp') no-repeat;
+  background-size: cover;
+}
+
 .service-center__city-list-mobile {
   margin-top: 68px;
   padding-top: 7px;
@@ -668,12 +673,12 @@ body {
   margin: -110px 0 0;
   position: relative;
 
-  background: url('/assets/images/main-page/bg-img_result.webp') no-repeat
+  background: url('') no-repeat
     center;
   background-size: cover;
 
   @include nsm {
-    background: url('/assets/images/main-page/bg-img-main-mobile_result.webp')
+    background: url('')
       no-repeat center;
     background-size: cover;
   }
@@ -706,7 +711,7 @@ body {
 
   &__content {
     position: relative;
-    margin-top: 329px;
+    margin-top: 312px;
 
     @include nmd {
       margin-top: 219px;
@@ -969,7 +974,7 @@ body {
   &__choose-city {
     position: static;
     width: fit-content;
-    padding-top: 39px;
+    padding-top: 24px;
   }
 
   &__mobile_js {
@@ -1060,13 +1065,14 @@ body {
     padding-top: 14.64px;
     color: $MainColor;
     font-size: clamp(40px, 4vw, 56.94px);
+    font-weight: 800;
     @include nsm {
       font-size: clamp(20.242px, 6vw, 56.94px);
     }
   }
   &__subtitle-p {
-    font-size: clamp(20px, 3vw, 39.8px);
-    font-weight: 400;
+    font-size: clamp(20px, 3vw, 39.518px);
+    font-weight: 200;
     line-height: 100%;
     padding: 8.82px 0px 0px 4.57px;
     color: $MainColor;
@@ -1139,7 +1145,7 @@ body {
     grid-template-rows: Clamp(42px, 5vw, 66px);
     margin: 0 auto;
     gap: 33px;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
 
     @include nmd {
       gap: 10px;
@@ -1190,7 +1196,7 @@ body {
         width: 100%;
         line-height: 130%;
         font-family: $font-petrov;
-        font-weight: 400;
+        font-weight: 300;
         font-size: Clamp(18px, 2vw, 25px);
         text-align: center;
         text-transform: uppercase;
@@ -1331,8 +1337,8 @@ body {
     border-radius: 15px;
     padding-left: 29px;
     font-family: $font-petrov;
-    font-weight: 400;
-    font-size: Clamp(16px, 2vw, 23px);
+    font-weight: 300;
+    font-size: Clamp(16px, 2vw, 21px);
     color: rgb(9%, 9%, 9%, 1);
     // height: Clamp(34px, 5vw, 70px);
     height: 100%;
@@ -1343,7 +1349,6 @@ body {
       opacity: 0.7;
       top: 0%;
       left: 0%;
-      transform: translate(0 , -15%);
 
       @include nsm {
         transform: translate(0 , 0);
@@ -1799,8 +1804,7 @@ body {
 .advantages {
   padding: 38px 0 180px;
   max-height: 899px;
-  background-color: #fff;
-  margin-top: -1px;
+  margin-top: 32px;
 
   @include nmd {
     padding-bottom: 15%;
@@ -1820,13 +1824,13 @@ body {
   &__title {
     text-align: center;
     font-family: $font-porsche;
-    font-weight: 800;
-    font-size: clamp(28.964px, 4.6vw, 58.484px);
+    font-weight: 900;
+    font-size: clamp(28.964px, 4.6vw, 48.913px);
     line-height: 100%;
     color: $YRealWhite;
-    margin-bottom: 9px;
+    margin-bottom: 15px;
     text-transform: uppercase;
-    color: #383838;
+    color: $MainColor;
 
     br {
       display: none;
@@ -1851,11 +1855,11 @@ body {
     text-align: center;
     font-family: $font-petrov;
     font-weight: 300;
-    font-size: Clamp(17px, 1.6vw, 23.736px);
+    font-size: Clamp(17px, 1.6vw, 20px);
     line-height: 150%;
     color: $YRealWhite;
-    margin-bottom: 61px;
-    color: #383838;
+    margin-bottom: 74px;
+    color: $MainColor;
 
     br {
       display: none;
@@ -1952,7 +1956,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    color: #383838;
+    color: $MainColor;
 
     @include nsm {
       font-size: clamp(18px, 5vw, 40px);
@@ -2003,12 +2007,13 @@ body {
 
   &__text {
     font-family: $font-petrov;
-    font-weight: 400;
+    font-weight: 300;
     // font-size: Clamp(13px, 1vw, 18px);
-    font-size: clamp(14px, 1.3vw, 20px);
-    line-height: 160%;
+    font-size: clamp(14px, 1.3vw, 18px);
+    line-height: 177.778%;
     color: $YRealWhite;
-    color: #383838;
+    color: $MainColor;
+    max-width: 378px;
 
     @include nsm {
       max-width: 767px;
@@ -2047,7 +2052,7 @@ body {
 
 .order {
   padding-bottom: 5.2em;
-  background: url('/assets/images/main-page/bg-img-order2_result.webp')
+  background: url('')
   no-repeat center;
   background-size: cover;
 
@@ -2090,7 +2095,7 @@ body {
     position: relative;
     font-family: $font-petrov;
     font-weight: 400;
-    font-size: clamp(15px, 1.2vw, 20px);
+    font-size: clamp(15px, 1.2vw, 23px);
     line-height: 160%;
     color: $YRealWhite;
     padding-top: 19px;
@@ -2480,8 +2485,8 @@ body {
     h2 {
       text-align: left;
       font-family: $font-petrov;
-      font-weight: 800;
-      font-size: Clamp(40px, 5vw, 84.766px);
+      font-weight: 400;
+      font-size: Clamp(40px, 5vw, 93.032px);
       line-height: 88%;
       color: $YSovsemBlack;
       margin-right: 0px;
@@ -2531,7 +2536,7 @@ body {
   &__text_short {
     font-family: $font-petrov;
     font-weight: 400;
-    font-size: clamp(14px, 1.5vw, 18px);
+    font-size: clamp(14px, 1.5vw, 19px);
     line-height: 170%;
     color: $YBlack;
     grid-area: short;
@@ -2575,8 +2580,8 @@ body {
   &__text {
     font-family: $font-petrov;
     font-weight: 400;
-    font-size: clamp(14px, 1.5vw, 18px);
-    line-height: 170%;
+    font-size: clamp(14px, 1.5vw, 19px);
+    line-height: 143.231%;
     color: $YBlack;
     grid-area: text;
     width: clamp(502px, 156vw, 872px);
@@ -2703,7 +2708,7 @@ body {
       color: $YRealWhite;
       width: 100%;
       border-radius: 18.452px;
-      background: linear-gradient(91deg, #38C2AC 13.96%, #96DC77 91.67%);
+      background: url('/assets/images/main-page/bg-img-text.webp') no-repeat;
 
       br {
         @include nmd {
@@ -2947,7 +2952,7 @@ body {
   &__text {
     font-family: $font-petrov;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 18px;
     line-height: 150%;
     color: $YRealWhite;
@@ -3076,7 +3081,7 @@ body {
 
   &__white-bgc:first-of-type {
     h4 {
-      font-size: clamp(18px, 2vw, 35px);
+      font-size: clamp(18px, 2vw, 30px);
       margin-bottom: 2px;
       @include nlg {
         font-size: 2.3vw;
@@ -3104,7 +3109,7 @@ body {
 
   &__subtitle {
     font-family: $font-petrov;
-    font-weight: 400;
+    font-weight: 300;
     // font-size: Clamp(20px, 2.2vw, 30px);
     font-size: clamp(26px, 1.6vw, 30px);
     line-height: 160%;
@@ -3336,7 +3341,7 @@ body {
   &__phone-ancor {
     font-family: $font-petrov;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 18px;
     line-height: 28.8px;
     color: #181818;
@@ -3399,7 +3404,7 @@ body {
 
   &__text {
     font-family: $font-petrov;
-    font-weight: 400;
+    font-weight: 300;
     font-size: Clamp(13px, 3vw, 18px);
     line-height: 160%;
     color: $YBlack;
@@ -3502,7 +3507,7 @@ body {
     background: $YRealWhite;
     border-radius: 15px;
     font-family: $font-petrov;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 22px;
     line-height: 100%;
     color: #939393;
@@ -3551,7 +3556,7 @@ body {
     border-radius: 15px;
     font-family: $font-petrov;
     color: $YRealWhite;
-    font-weight: 600;
+    font-weight: 800;
     font-size: 22px;
     line-height: 100%;
     cursor: pointer;

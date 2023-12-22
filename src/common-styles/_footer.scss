@@ -92,7 +92,7 @@
     &__phone {
         grid-area: phone;
         font-family: $font-petrov;
-        font-weight: 600;
+        font-weight: 800;
         font-size: 20px;
         line-height: 128%;
         text-transform: uppercase;
@@ -143,7 +143,7 @@
     &__cards {
         grid-area: cards;
         p {
-            font-weight: 600;
+            font-weight: 800;
         }
     }
 
