@@ -266,7 +266,7 @@ body {
   //
   .service-center__top {
     @include nmd {
-      padding-top: 40px;
+      padding-top: 0px;
       // max-width: 708px;
     }
     @include nsm {
@@ -408,6 +408,7 @@ body {
       z-index: 2;
       left: 50%;
       transform: translateX(-50%);
+      display: none;
     }
     @include nsm {
       padding-top: 1.5vw;
@@ -731,7 +732,7 @@ body {
     margin-top: 312px;
 
     @include nmd {
-      margin-top: 219px;
+      margin-top: 179px;
     }
     @include nsm {
       padding-bottom: 2.3vw;
@@ -3129,9 +3130,6 @@ body {
 
     @include nmd {
       background: none;
-    }
-
-    @include nlgs {
       border: none;
     }
 
