@@ -10,7 +10,7 @@
     padding: 22px 0 53px;
 
     @include nmd {
-        background: url("/assets/images/main-page/mobile/bg-img/footer_result.webp") no-repeat center;
+        background: linear-gradient(180deg, #383838 0%, #231F20 100%);;
         background-size: cover;
     }
     @include nxs {

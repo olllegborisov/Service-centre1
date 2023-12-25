@@ -58,8 +58,7 @@ body {
 
   @include nmd {
     height: 40px;
-    background: url('/assets/images/main-page/bg-img-header-mobile_result.webp')
-      no-repeat center;
+    background: linear-gradient(39deg, #313439 -330.74%, #828991 103.54%);
     background-size: cover;
   }
 
@@ -172,7 +171,7 @@ body {
 
   &__menu-item:hover {
     color: $MainColor;
-    background-color: rgba(124, 227, 213, 100%);
+    background-color: rgb(53, 53, 53);
   }
 
   &__menu-item {
@@ -271,8 +270,7 @@ body {
       // max-width: 708px;
     }
     @include nsm {
-      padding-top: 20px;
-      height: 19.8vw;
+      padding-top: 5px;
     }
     @include nxxs {
       padding-top: 0px;
@@ -413,6 +411,7 @@ body {
     }
     @include nsm {
       padding-top: 1.5vw;
+      display: none;
     }
     @include nxxs {
       padding-left: 11px;
@@ -492,9 +491,9 @@ body {
     top: 0;
     background-color: $YBlack;
     display: none;
-    border-radius: 18.452px;
+    border-radius: 0px 18.452px 18.452px 18.452px;
 
-    background: linear-gradient(91deg, #38C2AC 13.96%, #96DC77 91.67%);
+    background: linear-gradient(111deg, #383838 13.2%, #181818 102.08%);
     background-size: cover;
 
     @include nsm {
@@ -560,6 +559,14 @@ body {
 .three-sections {
   background: url('/assets/images/main-page/bg-img-three-sections.webp') no-repeat;
   background-size: cover;
+
+  @include nsm {
+    background: url('/assets/images/main-page/mobile/bg-img/three-sections.webp');
+  }
+  @include nxxs {
+    background: url('/assets/images/main-page/mobile/bg-img/three-sections.webp');
+    background-size: cover;
+  }
 }
 
 .service-center__city-list-mobile {
@@ -574,6 +581,10 @@ body {
 
   @include nsm {
     margin-top: 21.2vw;
+    width: 96vw;
+  }
+  @include nxs {
+    width: 100vw;
   }
 
   .service-center__list-item {
@@ -610,6 +621,12 @@ body {
     background: url('/assets/images/main-page/bg-img-cities2_result.webp')
       no-repeat center;
     background-size: cover;
+
+    @include nmd {
+      background: url('/assets/images/main-page/bg-img-cities2_result-2.webp')
+      no-repeat center;
+      background-size: cover;
+    }
   }
 
   &__active {
@@ -718,7 +735,7 @@ body {
     }
     @include nsm {
       padding-bottom: 2.3vw;
-      margin-top: 40.5vw;
+      margin-top: 33.5vw;
     }
   }
 
@@ -1067,7 +1084,7 @@ body {
     font-size: clamp(40px, 4vw, 56.94px);
     font-weight: 800;
     @include nsm {
-      font-size: clamp(20.242px, 6vw, 56.94px);
+      font-size: clamp(20.242px, 6vw, 56.94px); 
     }
   }
   &__subtitle-p {
@@ -1147,6 +1164,10 @@ body {
     gap: 33px;
     margin-bottom: 20px;
 
+    @include nlg {
+      gap: 25px;
+    }
+
     @include nmd {
       gap: 10px;
     }
@@ -1170,18 +1191,15 @@ body {
     }
 
     @include nxxs {
-      gap: 10px;
-      margin-bottom: 20px;
+      gap: 7.5px;
+      margin-bottom: 6px;
     }
 
     li {
       box-sizing: border-box;
       color: $YRealWhite;
       border-radius: 14.122px;
-      background: #33c1af;
-      box-shadow: 0px 18.82987px 18.82987px 0px rgba(0, 0, 0, 0.05);
-      backdrop-filter: blur(7.061201095581055px);
-      transition: 0.2s;
+      border: 2px solid #FFF;       
       align-items: center;
       display: flex;
       height: 62px;
@@ -1203,12 +1221,18 @@ body {
         cursor: default;
 
 
+
       @include nlg {
-        font-size: clamp(18px, 2vw, 23px);
+        font-size: 21px;
+      }
+
+      @include nmd {
+        font-size: 16px;
       }
 
         @include nsm {
-          font-size: 5.625vw;
+          font-size: 5vw;
+          text-transform: none;
         }
       }
 
@@ -1240,6 +1264,7 @@ body {
 
     @include nmd {
       gap: 10px 8px;
+      padding-top: 10px;
     }
 
     @include nsm {
@@ -1807,7 +1832,7 @@ body {
   margin-top: 32px;
 
   @include nmd {
-    padding-bottom: 15%;
+    padding-bottom: 19%;
   }
   @include nsm {
     padding: 46px 10px 140px;
@@ -1841,6 +1866,7 @@ body {
       font-size: clamp(32.543px, 10vw, 90px);
       text-align: left;
       margin-bottom: 20px;
+      line-height: 111%;
 
       br {
         display: block;
@@ -1872,13 +1898,11 @@ body {
     @include nsm {
       text-align: left;
       font-size: clamp(13px, 3vw, 40px);
+      margin-bottom: 12vw;
 
       br {
         display: block;
       }
-    }
-    @include nxxs {
-      margin-bottom: 31px;
     }
     // @include nxxs {
     //     font-size: Clamp(13px, 1.6vw, 20px);
@@ -1887,8 +1911,8 @@ body {
 
   &__list {
     display: grid;
-    grid-template-columns: 1.1fr 1fr 0.7fr;
-    gap: 65px 62px;
+    grid-template-columns: 1.1fr 1.1fr 0.75fr;
+    gap: 86px 55px;
 
     @include nlg {
       gap: 10% 1%;
@@ -1901,7 +1925,7 @@ body {
 
     @include nsm {
       grid-template-columns: 1fr;
-      row-gap: 2%;
+      row-gap: 7%;
     }
     @include nxxs {
       row-gap: 6.8%;
@@ -2013,11 +2037,16 @@ body {
     line-height: 177.778%;
     color: $YRealWhite;
     color: $MainColor;
-    max-width: 378px;
+    max-width: 26vw;
+
+    @include nmd {
+      max-width: 32vw;  
+      }
+
 
     @include nsm {
       max-width: 767px;
-      font-size: 4.4vw;
+      font-size: 3.9vw;
 
     }
   }
@@ -2026,7 +2055,6 @@ body {
 .advantages-mobile {
   padding: 15px 0 191px;
   max-height: 899px;
-  background-color: #fff;
   margin-top: -1px;
   display: none;
 
@@ -2037,21 +2065,21 @@ body {
 
   @include nsm {
     display: block;
-    max-height: 1538px;
-    padding: 15px 0 120px;
+    max-height: 286vw;
+    padding: 7.5vw 0 68vw;
   }
   @include nxs {
-    padding: 15px 0 82px;
   }
   @include nxxs {
     display: block;
-    padding: 15px 0 190px;
+    max-height: 342vw;
+    padding: 7.5vw 0 61vw;
   }
 
 }
 
 .order {
-  padding-bottom: 5.2em;
+  padding-bottom: 5.65em;
   background: url('')
   no-repeat center;
   background-size: cover;
@@ -2088,6 +2116,7 @@ body {
     @include nxxs {
       padding-top: 6px;
       display: block;
+      font-size: clamp(14px, 1.2vw, 20px);
     }
   }
 
@@ -2095,10 +2124,10 @@ body {
     position: relative;
     font-family: $font-petrov;
     font-weight: 400;
-    font-size: clamp(15px, 1.2vw, 23px);
+    font-size: clamp(15px, 1.2vw, 20px);
     line-height: 160%;
     color: $YRealWhite;
-    padding-top: 19px;
+    padding-top: 36px;
 
 
     @include nsm {
@@ -2128,10 +2157,11 @@ body {
   }
 
   &__image {
-    width: 42.4%;
+    width: 46.64%;
     height: clamp(486px, 58vw, 712px);
     position: relative;
     z-index: 1;
+    margin-left: 50px;
 
     @include nmd {
       display: flex;
@@ -2184,12 +2214,13 @@ body {
     font-family: $font-petrov;
     font-weight: 800;
     // font-size: Clamp(14px, 3vw, 39.258px);
-    font-size: Clamp(26.984px, 5vw, 39.258px);
+    font-size: Clamp(26.984px, 5vw, 39px);
     line-height: 114.5%;
     color: $YRealWhite;
     text-transform: uppercase;
     text-align: center;
-    padding-top: 56px;
+    padding-top: 28px;
+
 
     @include nlg {
       font-size: Clamp(26.984px, 2vw, 39.258px);
@@ -2200,7 +2231,7 @@ body {
       margin-bottom: 0;
       padding-top: 0px;
       line-height: clamp(18px, 5vw, 90px);
-      font-size: clamp(26.984px, 8vw, 90.258px);
+      font-size: clamp(25.984px,8vw,90.258px);
       span {
         font-size: clamp(14.853px, 4vw, 50px);
       }
@@ -2216,6 +2247,7 @@ body {
     list-style-type: none;
     padding-left: 0;
     margin-top: 32px;
+    max-width: clamp(400px, 40vw, 667px);
 
     ol {
       list-style-type: none;
@@ -2230,11 +2262,14 @@ body {
       width: 100%;
       // font-size: 3vw;
       line-height: 115%;
+    }
+    @include nsm {
+      line-height: 152%;
+    }
 
-      @include nxxs {
-        margin-left: 11px;
-        margin-top: 4px;
-      }
+    @include nxxs {
+      margin-left: 11px;
+      margin-top: 4px;
     }
   }
 
@@ -2249,9 +2284,12 @@ body {
   &__item {
     margin-bottom: 26px;
 
+    @include nsm {
+      margin-bottom: 6vw;
+    }
+
     @include nxxs {
       line-height: 150%;
-      margin-bottom: 17px;
     }
 
     @include nxxs {
@@ -2271,10 +2309,12 @@ body {
       @include nmd {
         margin-bottom: 2%;
       }
-      @include nxxs {
-        margin-bottom: 18.5px;
+      @include nsm {
         line-height: 160%;
-        max-width: 285px;
+      }
+      @include nxxs {
+        margin-bottom: 26.5px;
+        max-width: 286px;
       }
     }
 
@@ -2312,11 +2352,13 @@ body {
         margin-left: 16px;
         list-style-type: none;
         position: relative;
-
+        @include nxs {
+          margin-left: 6px;
+        }
 
       }
       li:last-child {
-        margin-top: 2px;
+        margin-top: 1vw;
       }
     }
   }
@@ -2324,7 +2366,10 @@ body {
   &__text {
     font-weight: 800;
     text-align: center;
-    padding-top: 9.7%;
+    padding-top: 6.7%;
+    max-width: 1061px;
+    margin: 0 auto;
+    font-size: 23px;
 
     @include nlg {
       padding-top: 1%;
@@ -2348,10 +2393,11 @@ body {
 
       @include nsm {
         font-size: 3.5vw;
+        text-align: center;
+        display: none;
       }
 
       @include nxs {
-        text-align: center;
         padding-top: 9%;
         font-size: 4.5vw;
       }
@@ -2370,9 +2416,6 @@ body {
 
 .order-mobile {
   padding-bottom: 5.2em;
-  background: url('/assets/images/main-page/bg-img-order2_result.webp')
-  no-repeat center;
-  background-size: cover;
   padding-top: 29px;
   margin-top: -1px;
   display: none;
@@ -2390,19 +2433,20 @@ body {
 
   @include nsm {
     display: block;
+    padding-left: 10px;
   }
 
   @include nxs {
-    padding-bottom: 1.3em;
-      background: url('/assets/images/main-page/mobile/bg-img/order2.webp')
-      no-repeat center;
-      background-size: cover;
+    padding-bottom: 4.1em;
+    background: none;
+    background-size: cover;
+    padding-left: 0px;
   }
 }
 
 .details {
   position: relative;
-  padding: 57px 0 47px;
+  padding: 30px 0 47px;
   background: $YRealWhite;
   overflow: hidden;
   background: url('/assets/images/main-page/bg-img-details_result.webp')
@@ -2449,6 +2493,8 @@ body {
     }
     @include nsm {
       margin-top: -31vw;
+      width: 100%;
+      
     }
     @include nxs {
       left: 54%;
@@ -2486,8 +2532,8 @@ body {
       text-align: left;
       font-family: $font-petrov;
       font-weight: 400;
-      font-size: Clamp(40px, 5vw, 93.032px);
-      line-height: 88%;
+      font-size: Clamp(40px, 5vw, 84.032px);
+      line-height: 100%;
       color: $YSovsemBlack;
       margin-right: 0px;
       margin-top: 10px;
@@ -2533,16 +2579,25 @@ body {
     }
   }
 
+  &__wrapp {
+    width: clamp(402px, 50vw, 706px);
+    padding-right: 1vw;
+    @include nlg {
+      width: 46vw;
+    }
+    @include nmd {
+      width: 56vw;
+    }
+  }
+
   &__text_short {
     font-family: $font-petrov;
     font-weight: 400;
-    font-size: clamp(14px, 1.5vw, 19px);
-    line-height: 170%;
+    font-size: clamp(14px, 1.5vw, 20px);
+    line-height: 166%;
     color: $YBlack;
     grid-area: short;
-    width: Clamp(502px, 156vw, 872px);
-    margin-top: 53px;
-    padding-left: 142px;
+    margin-top: 14px;
 
     @include nlg {
       font-size: clamp(14px, 1.2vw, 18px);
@@ -2551,7 +2606,7 @@ body {
     }
 
     @include nmd {
-      width: clamp(264px, 91vw, 681px);
+      width: 100%;
       font-size: clamp(13px, 0.5vw, 18px);
     }
 
@@ -2559,44 +2614,46 @@ body {
       padding-left: 3vw;
       font-size: 4.5vw;
       width: 100vw;
-      margin-top: -18vw;
+      margin-top: -64vw;
     }
     @include nsm {
       font-size: 3vw;
       padding-left: 3vw;
+      padding-top: 100px;
     }
 
     @include nxs {
       font-size: 4.3vw;
       line-height: 174%;
+      padding-top: 0px;
     }
 
     @include nxxs {
       max-width: 300px;
       margin-bottom: 45px;
+      line-height: 182%;
     }
   }
 
   &__text {
     font-family: $font-petrov;
     font-weight: 400;
-    font-size: clamp(14px, 1.5vw, 19px);
-    line-height: 143.231%;
+    font-size: clamp(14px, 1.5vw, 20px);
+    line-height: 170%;
     color: $YBlack;
     grid-area: text;
-    width: clamp(502px, 156vw, 872px);
-    margin-top: 56px;
-    padding-left: 59px;
+    margin-top: 23px;
+    width: 66%;
 
     @include nlg {
       font-size: clamp(14px, 1.2vw, 18px);
-      width: clamp(502px, 156vw, 804px);
+      width: 56vw;
       justify-content: end;
       display: flex;
     }
 
     @include nmd {
-      width: clamp(381px, 332vw, 644px);
+      width: 65vw;
       font-size: clamp(13px, 0.5vw, 18px);
     }
 
@@ -2605,6 +2662,7 @@ body {
       font-size: 3vw;
       padding-top: 5vw;
       width: 100vw;
+      line-height: 199%;
     }
 
     @include nxs {
@@ -2616,7 +2674,7 @@ body {
     @include nxxs {
       padding-left: 8px;
       font-size: 14px;
-      margin-top: 23px;
+      margin-top: 26px;
       padding-top: 0px;
     }
   }
@@ -2624,7 +2682,7 @@ body {
   @include nxs {
     &__detailed:before {
       content: '';
-      bottom: 98px;
+      bottom: 74px;
       position: absolute;
       width: 239px;
       height: 241px;
@@ -2648,13 +2706,18 @@ body {
     background-size: cover;
     border-radius: 18.452px;
     grid-area: details;
-    margin-top: 40px;
+    margin-top: 0px;
     position: relative;
+    width: 82%;
 
     // @include nlg {
     //     position: relative;
     //     z-index: 1;
     // }
+
+    @include nmd {
+      width: 100%;
+    }
 
     @include nsm {
       margin-top: 13vw;
@@ -2667,12 +2730,11 @@ body {
 
     @include nxs {
       order: 2;
-      margin-top: 44vw;
-      background: url('/assets/images/main-page/mobile/bg-img/girl_result.webp')
-      no-repeat center;
+      margin-top: 27.8vw;
+      background: linear-gradient(332deg, #313439 -7.34%, #60676F 80.65%, #313439 138.43%) no-repeat center;
       background-size: cover;
       min-height: 116px;
-      padding-top: 83px;
+      padding-top: 89px;
     }
 
     &__img {
@@ -2768,6 +2830,7 @@ body {
 
   @include nsm {
     display: block;
+    background: #fff;
   }
 
 
@@ -2778,7 +2841,7 @@ body {
   .details__title1, .details__title2 {
     color: #000;
     line-height: 88%;
-    font-family: Futura PT;
+    font-family: Inter;
     margin: 0 auto;
   }
   .details__title1 {
@@ -2788,7 +2851,10 @@ body {
     letter-spacing: -1px;
 
     @include nsm {
-      font-size: 18vw;
+      font-size: 14vw;
+      text-align: center;
+      margin-bottom: 0px;
+
     }
   }
   .details__title2 {
@@ -2797,7 +2863,7 @@ body {
     margin-left: 6px;
 
     @include nsm {
-      font-size: 12vw;
+      font-size: 11vw;
     }
   }
 }
@@ -2810,25 +2876,26 @@ body {
 
   @include nmd {
     background: none;
-    background-color: #17c491;
-  }
+    background: linear-gradient(180deg, #383838 0%, #231F20 100%);
+    }
 }
 
 .faq {
-  padding: 59px 0 120px;
+  padding: 120px 0 120px;
   font-family: 'Gilroy';
 
   @include nmd {
-    background: url('/assets/images/main-page/mobile/bg-img/questions_result.webp')
+    background: url('/assets/images/main-page/bg-img-faq.webp')
       no-repeat center;
     background-size: cover;
+    padding: 60px 0 120px;
   }
 
   @include nsm {
     padding-bottom: 60px;
   }
   @include nxs {
-    padding: 19px 0 5px;
+    padding: 27px 0 56px;
   }
 
   &__title {
@@ -2842,7 +2909,7 @@ body {
     text-align: center;
 
     @include nsm {
-      font-size: 12vw;
+      font-size: 11vw;
     }
   
 
@@ -2854,6 +2921,10 @@ body {
   &__list {
     font-family: $font-petrov;
     margin: 0 91px 0 58px;
+
+    @include nmd {
+      margin: 0px;
+    }
 
     @include nsm {
       margin: 0;
@@ -2927,7 +2998,7 @@ body {
 
   &__item:not(:last-of-type) {
     // margin-bottom: 35px;
-    margin-bottom: 27px;
+    margin-bottom: 24px;
 
     @include nxxs {
       margin-bottom: -10px;
@@ -2969,11 +3040,12 @@ body {
 
     @include nsm {
       font-size: 4.4vw;
+      margin: 14px 0 25px;
     }
 
     @include nxxs {
       margin-left: -15px;
-      margin-top: 8.6px;
+      margin-top: 7.6px;
       max-width: 270px;
     }
   }
@@ -2987,14 +3059,11 @@ body {
   }
 
   @include nmd {
-    margin-bottom: 23px;
-  }
-  @include nsm {
     margin-bottom: 0px;
   }
 
   overflow: hidden;
-  padding-bottom: 114px;
+  padding-bottom: 139px;
 
   &__content {
     @include nmd {
@@ -3016,9 +3085,10 @@ body {
       'brands phone'
       'hours form'
       'trade-in form';
-    margin-top: 50px;
+    margin-top: 11px;
 
     @include nmd {
+      margin-top: 0px;
       grid-template-columns: 1fr;
 
       grid-template-areas:
@@ -3029,8 +3099,9 @@ body {
         'form';
     }
 
+
     @include nxs {
-      gap: 11px;
+      gap: 8px;
       margin-top: 0px;
     }
   }
@@ -3047,17 +3118,21 @@ body {
     border-radius: 15px;
 
     @include nmd {
-      border-radius: 6.887px;
+      border-radius: 0px 0px 6.887px 6.887px;
     }
   }
 
   &__gray-bgc {
-    background-color: #fff;
+    border: 2px solid #FFF;
     border-radius: 15px;
     padding-top: 4px;
 
     @include nmd {
       background: none;
+    }
+
+    @include nlgs {
+      border: none;
     }
 
     @include nxs {
@@ -3075,7 +3150,7 @@ body {
     }
 
     @include nxs {
-      padding: 4vw 4vw 4.3vw 4vw;
+      padding: 4vw 4vw 0.3vw 4vw;
     }
   }
 
@@ -3125,7 +3200,7 @@ body {
     }
 
     @include nxs {
-      margin-bottom: 2vw;
+      margin-bottom: 8px;
     }
 
     &_centers {
@@ -3208,6 +3283,7 @@ body {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    margin-top: 18px;
 
     @include nxs {
       padding: 0 12px;
@@ -3250,12 +3326,9 @@ body {
     grid-area: hours;
 
     @include nsm {
-      padding: 10px 22px 15px 13px;
+      padding: 15px 17px 10px 12px;
     }
 
-    @include nsm {
-      padding: 10px 28px 24px 19px;
-    }
     @include nxs {
       margin-top: -1px;
     }
@@ -3272,7 +3345,7 @@ body {
     grid-area: trade-in;
 
     @include nsm {
-      padding: 16px 21px 21px 14px;
+      padding: 16px 21px 15px 14px;
     }
   }
 
@@ -3364,17 +3437,22 @@ body {
     font-style: normal;
     font-weight: 600;
     font-size: Clamp(15px, 4vw, 50px);
-    line-height: 170%;
+    line-height: 177%;
     color: $MainColor;
     transition: 0.2s;
 
     &:hover {
-      color: #33c1af;
+      color: #000;
+    }
+
+    @include nlg {
+      font-size: 41px;
+
     }
 
     @include nmd {
       line-height: 170%;
-
+      font-size: 4.7vw;
       &:hover {
         color: $YRealWhite;
       }
@@ -3409,10 +3487,11 @@ body {
     line-height: 160%;
     color: $YBlack;
     width: 100%;
-    max-width: 549px;
+    max-width: 592px;
 
     @include nxs {
-      line-height: 153%;
+      line-height: 149%;
+
     }
 
     &_bold {
@@ -3479,6 +3558,11 @@ body {
       border-bottom-right-radius: 0;
       gap: 10px;
     }
+    @include nsm {
+      margin-top: 7px;
+      gap: 8px;
+      padding: 14px 11px 26px 12px;
+    }
   }
 
   &__err {
@@ -3514,6 +3598,10 @@ body {
     height: 55px;
     padding-left: 24px;
     border: none;
+
+    @include nlg {
+      height: 66px;
+    }
 
     @include nmd {
       background-color: $YBadWhite;
@@ -3576,7 +3664,7 @@ body {
       }
     }
     @include nxs {
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 800;
     }
   }
@@ -3689,9 +3777,6 @@ body {
   // @include nsm {
   //     height: 36px;
   // }
-  @include nsm {
-    border: 0.489px solid #00418C;
-  }
 }
 
 .service-center__textarea {
