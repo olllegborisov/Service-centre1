@@ -2876,7 +2876,7 @@ body {
   background-size: cover;
   margin-top: -2px;
 
-  @include nmd {
+  @include nsm {
     background: none;
     background: linear-gradient(180deg, #383838 0%, #231F20 100%);
     }
@@ -2886,14 +2886,15 @@ body {
   padding: 120px 0 120px;
   font-family: 'Gilroy';
 
+
   @include nmd {
-    background: url('/assets/images/main-page/bg-img-faq.webp')
-      no-repeat center;
-    background-size: cover;
     padding: 60px 0 120px;
   }
 
   @include nsm {
+    background: url('/assets/images/main-page/bg-img-faq.webp')
+    no-repeat center;
+    background-size: cover;
     padding-bottom: 60px;
   }
   @include nxs {
@@ -2903,7 +2904,7 @@ body {
   &__title {
     font-family: $font-petrov;
     font-weight: 400;
-    font-size: clamp(50px, 5vw, 93.032px);
+    font-size: clamp(50px, 7vw, 93.032px);
     line-height: 88%;
     text-transform: uppercase;
     color: $YRealWhite;
@@ -3109,7 +3110,7 @@ body {
   }
 
   &__white-bgc:first-of-type {
-    @include nxs {
+    @include nsm {
       border-top-left-radius: 0px;
       border-top-right-radius: 0px;
     }
@@ -3120,7 +3121,7 @@ body {
     border-radius: 15px;
 
     @include nmd {
-      border-radius: 0px 0px 6.887px 6.887px;
+      border-radius: 6.887px;
     }
   }
 
