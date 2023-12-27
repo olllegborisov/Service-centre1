@@ -1726,8 +1726,9 @@ body {
     }
 
     &__gray-bgc {
-        background-color: #fff;
+        background-color: transparent;
         border-radius: 15px;
+        border: 2px solid #FFF;
 
         @include nmd {
             background: none;
@@ -1937,7 +1938,7 @@ body {
         align-items: center;
         justify-content: center;
         grid-area: phone;
-        color: #383838;
+        color: #fff;
 
         @include nmd {
             flex-direction: row;
@@ -2017,11 +2018,11 @@ body {
         font-weight: 600;
         font-size: Clamp(15px, 4vw, 50px);
         line-height: 85px;
-        color: #383838;
+        color: #fff;
         transition: 0.2s;
 
         &:hover {
-            color: #7f7f7f;
+            color: #181818;
         }
 
         @include nlg {
